@@ -31,9 +31,9 @@ BuildRequires:  pkgconfig(mount)
 %{?_opt_qt5:Requires: %{_opt_qt5}%{?_isa} = %{_opt_qt5_version}}
 Requires: opt-qt5-qtbase-gui
 Requires: opt-qt5-qtdeclarative
-Requires:       media-player-info
-Requires:       udisks2
-#Requires:       upower
+Requires: udisks2
+#Requires: media-player-info
+#Requires: upower
 
 Provides:       opt-kf5-solid-libs = %{version}-%{release}
 Provides:       opt-kf5-solid-libs%{?_isa} = %{version}-%{release}
