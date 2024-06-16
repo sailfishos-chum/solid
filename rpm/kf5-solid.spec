@@ -1,7 +1,7 @@
-%global kf5_version 5.115.0
+%global kf5_version 5.116.0
 
 Name: opt-kf5-solid
-Version: 5.115.0
+Version: 5.116.0
 Release: 1%{?dist}
 Summary: KDE Frameworks 5 Tier 1 integration module that provides hardware information
 
