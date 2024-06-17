@@ -60,21 +60,14 @@ developing applications that use %{name}.
 export QTDIR=%{_opt_qt5_prefix}
 touch .git
 
-mkdir -p build
-pushd build
-
-%_opt_cmake_kf5 ../ \
+%_opt_cmake_kf5 \
   -DWITH_NEW_POWER_ASYNC_API:BOOL=ON \
   -DWITH_NEW_POWER_ASYNC_FREEDESKTOP:BOOL=ON \
   -DWITH_NEW_SOLID_JOB:BOOL=ON
-%make_build
-
-popd
+%cmake_build
 
 %install
-pushd build
-make DESTDIR=%{buildroot} install
-popd
+%cmake_install
 
 
 %find_lang_kf5 solid5_qt
